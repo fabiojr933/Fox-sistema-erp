@@ -22,6 +22,7 @@
       <link href="<?php echo base_url('theme/assets/plugins/steps/jquery.steps.css') ?>" rel="stylesheet">
       <link href="<?php echo base_url('theme/assets/plugins/bootstrap-select/css/bootstrap-select.min.css') ?>" rel="stylesheet"> 
       <link href="<?php echo base_url('theme/assets/plugins/toastr/toastr.min.css') ?>" rel="stylesheet">
+      <link href="<?php echo base_url('theme/assets/plugins/sweetalert/bootstrap-sweetalert.css') ?>" rel="stylesheet">
 
    </head>
    <body>

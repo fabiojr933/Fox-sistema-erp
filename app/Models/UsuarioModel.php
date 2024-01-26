@@ -44,4 +44,12 @@ class UsuarioModel extends Model
             return $usuario['id_usuario'];
         }
     }
+
+    public function verificaEmpresa($id)
+    {
+        $usuario = $this->where('id_empresa', $id)->first();
+        if ($usuario['id_empresa']) {
+            return  ['error' => 'Essa empresa esta vinculado a um usuario, não é possivel excluir!'];
+        }
+    }
 }

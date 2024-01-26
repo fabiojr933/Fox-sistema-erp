@@ -67,5 +67,9 @@ $routes->get('/erp/dashboard/receita', 'Receita::index');
 $routes->get('/erp/dashboard/receita/novo', 'Receita::novo');
 $routes->get('/erp/dashboard/receita/editar/(:num)', 'Receita::editar/$1');
 
-// configuracao
-$routes->get('/erp/dashboard/configuracao/empresa', 'Configuracao::empresa');
+// empresa
+$routes->get('/erp/dashboard/empresa', 'Empresa::index');
+$routes->get('/erp/dashboard/empresa/novo', 'Empresa::novo');
+$routes->get('/erp/dashboard/empresa/excluir/(:num)', 'Empresa::excluir/$1');
+$routes->get('/erp/dashboard/empresa/editar/(:num)', 'Empresa::editar/$1');
+$routes->post('/erp/dashboard/empresa/salvar', 'Empresa::salvar');

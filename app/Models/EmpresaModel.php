@@ -63,4 +63,43 @@ class EmpresaModel extends Model
         $empresa = $this->where('cnpj_cpf', $cnpj_cpf)->first();
         return $empresa['id_empresa'];
     }
+
+    public function inserir($dados)
+    {
+        $email = $this->where('email', $dados['email'])->first();
+        if ($email) {
+            return  ['error' => 'E-mail já cadastrado'];
+        }
+        $cnpj_cpf = $this->where('cnpj_cpf', $dados['cnpj_cpf'])->first();
+        if ($cnpj_cpf) {
+            return ['error' => 'cnpj_cpf já cadastrado'];
+        } else {
+            $this->insert($dados);
+            return  ['success' => 'Empresa cadastrado com sucesso'];
+        }
+    }
+
+    public function updateEmpresa($dados, $id_empresa)
+    {
+        $this->where('id_empresa', $id_empresa)->set($dados)->update();
+        return  ['success' => 'Empresa alterado com sucesso'];
+    }
+
+    public function listarEmpresas()
+    {
+        $empresa = $this->select()->findAll();
+        return $empresa;
+    }
+
+    public function getEmpresa($id)
+    {
+        $empresa = $this->where('id_empresa', $id)->first();
+        return $empresa;
+    }
+
+    public function excluirEmpresa($id)
+    {
+        $this->where('id_empresa', $id)->delete();
+        return  ['success' => 'Empresa excluida com sucesso'];
+    }
 }

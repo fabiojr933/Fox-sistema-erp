@@ -123,7 +123,7 @@
           <a href="javascript:void(0)"><i class="fa fa-map-o"></i>
             <span>Configuração</span><i class="accordion-icon fa fa-angle-left"></i></a>
           <ul class="sub-menu">
-            <li><a href="/erp/dashboard/configuracao/empresa">Empresa</a></li>          
+            <li><a href="/erp/dashboard/empresa/novo">Empresa</a></li>          
           </ul>
         </li>
 
