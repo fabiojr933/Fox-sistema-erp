@@ -22,6 +22,22 @@ class Usuario extends Controller
       $this->session = session();
       $this->mensagem = new Mensagem();
    }
+
+   public function index()
+   {
+      echo View('templates/header');
+      echo View('erp/usuario/index');
+      echo View('templates/footer');
+   }
+
+   public function novo()
+   {
+      $empresa['empresa'] = $this->dbEmpresa->listarEmpresas();
+      echo View('templates/header');
+      echo View('erp/usuario/novo', $empresa);
+      echo View('templates/footer');
+   }
+
    public function login()
    {
       $id_empresa = $this->dbEmpresa->verificaUsuarioSuper();
@@ -62,7 +78,7 @@ class Usuario extends Controller
    }
 
    public function logoff()
-   {      
+   {
       $this->session->destroy();
       return redirect()->to('/login');
    }

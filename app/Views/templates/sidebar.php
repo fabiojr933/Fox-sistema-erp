@@ -1,6 +1,6 @@
 <div class="page-sidebar">
-  <a class="logo-box" href="index.html">
-    <span><img src="<?php echo base_url('theme/assets/images/logo-white.png') ?>" alt=""></span>
+  <a class="logo-box" href="/">
+    <span>teste</span>
     <i class="ion-aperture" id="fixed-sidebar-toggle-button"></i>
     <i class="ion-ios-close-empty" id="sidebar-toggle-button-close"></i>
   </a>
@@ -123,7 +123,8 @@
           <a href="javascript:void(0)"><i class="fa fa-map-o"></i>
             <span>Configuração</span><i class="accordion-icon fa fa-angle-left"></i></a>
           <ul class="sub-menu">
-            <li><a href="/erp/dashboard/empresa/novo">Empresa</a></li>          
+            <li><a href="/erp/dashboard/empresa">Empresa</a></li>     
+            <li><a href="/erp/dashboard/usuario">Usuario</a></li>         
           </ul>
         </li>
 

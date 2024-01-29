@@ -13,6 +13,8 @@ $routes->get('/', 'Dashboard::index');
 $routes->get('/erp/dashboard', 'Dashboard::index');
 
 // usuario
+$routes->get('/erp/dashboard/usuario', 'Usuario::index');
+$routes->get('/erp/dashboard/usuario/novo', 'Usuario::novo');
 $routes->get('/login', 'Usuario::login');
 $routes->post('/login/autenticar', 'Usuario::autenticar');
 $routes->get('/logoff', 'Usuario::logoff');
